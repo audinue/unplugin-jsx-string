@@ -269,8 +269,7 @@ function transformJsx(code: string, node: JSX) {
     ) {
       return `__RAW_${getSource(node.arguments[0])}_RAW`
     }
-
-    return notSupported(node)
+    return `__RAW_${getSource(node)}_RAW`
   }
 
   function resolveBinary(node: Binary) {
